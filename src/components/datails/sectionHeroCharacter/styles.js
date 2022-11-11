@@ -1,0 +1,85 @@
+import { styled } from "../../../styles";
+import { Container } from "../../../styles/global";
+import BgHero from "../../../assets/bg-hero.jpg";
+
+export const SectionCharactersStyle = styled("section", {
+  position: "relative",
+  zIndex: 1,
+  paddingTop: "9.6rem",
+  height: "73rem",
+  borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+  background: `url(${BgHero.src}) no-repeat top center`,
+  backgroundAttachment: "fixed",
+  "&:after": {
+    content: "",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    zIndex: -1,
+  },
+  [`${Container}`]: {
+    display: "flex",
+    alignItems: "center",
+    height: "100%",
+    borderRight: "1px solid rgba(255, 255, 255, 0.2)",
+    borderLeft: "1px solid rgba(255, 255, 255, 0.2)",
+  },
+  ".image": {
+    borderRadius: "0.5rem",
+    overflow: "hidden",
+    height: "63.1rem",
+    img: {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
+  },
+  ".info": {
+    flex: 1,
+    maxWidth: "65rem",
+    marginLeft: "3.2rem",
+    display: "flex",
+    span: {
+      display: "block",
+      fontWeight: 400,
+      fontSize: "1.8rem",
+      lineHeight: "150%",
+      color: "$grey400",
+      opacity: "0.6",
+      marginTop: "1.8rem",
+    },
+    "& > div": {
+      position: "relative",
+      flex: 1,
+      maxWidth: "54.6rem",
+      paddingLeft: "2.7rem",
+      marginLeft: "1.9rem",
+      "&:before": {
+        content: "",
+        position: "absolute",
+        left: 0,
+        top: 11,
+        width: "0.4rem",
+        height: "4.6rem",
+        backgroundColor: "$red800",
+      },
+      h1: {
+        fontWeight: 600,
+        fontSize: "6.1rem",
+        lineHeight: "116%",
+        color: "$white",
+        marginBottom: "1.3rem",
+      },
+      p: {
+        fontWeight: 400,
+        fontSize: "1.6rem",
+        lineHeight: "150%",
+        color: "$grey400",
+        maxWidth: "38.5rem",
+      },
+    },
+  },
+});
